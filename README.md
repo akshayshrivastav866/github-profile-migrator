@@ -1,16 +1,16 @@
 # GitHub Repository Migration Script
 
-A bash script to migrate GitHub repositories from one account to another while preserving complete commit history. This is particularly useful when migrating your GitHub profile and want to maintain your contribution graph.
+A bash script to migrate GitHub repositories from one account to another while preserving complete commit history. This is particularly useful when migrating your GitHub profile and you want to maintain your contribution graph.
 
-## 🎯 What This Script Does
+## What does it do?
 
-- ✅ Clones the entire repository history (including all branches and tags) from your old GitHub account
-- ✅ Pushes everything to your new GitHub account
-- ✅ Shows you which email addresses are associated with commits
-- ✅ Provides step-by-step guidance for completing the migration
-- ✅ Preserves your contribution graph by migrating commit history
+- Clones the entire repository history (including all branches and tags) from your old GitHub account
+- Pushes everything to your new GitHub account
+- Shows you which email addresses are associated with commits
+- Provides step-by-step guidance for completing the migration
+- Preserves your contribution graph by migrating commit history
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before using this script, make sure you have:
 
@@ -21,7 +21,7 @@ Before using this script, make sure you have:
    - The repository exists in your old account
    - An empty repository exists in your new account
 
-## 🔑 Getting a GitHub Personal Access Token
+## Getting a GitHub Personal Access Token (PAT)
 
 1. Go to your **old GitHub account** → Settings → Developer settings → Personal access tokens → Tokens (classic)
 2. Click "Generate new token (classic)"
@@ -30,7 +30,7 @@ Before using this script, make sure you have:
 5. Click "Generate token"
 6. **Copy the token immediately** (you won't be able to see it again!)
 
-## 🚀 How to Use
+## How to Use
 
 ### Step 1: Download the Script
 
@@ -108,13 +108,9 @@ The script will:
 
 The interactive version will ask for confirmation at each step, while the non-interactive version proceeds automatically after the initial confirmation.
 
-## 📧 Important: Email Migration
+## Important: Email Migration
 
-After the repository migration, you **must** migrate the email addresses associated with your commits:
-
-### Why This Matters
-
-GitHub uses email addresses in commits to attribute contributions to your profile. If the email addresses aren't verified on your new account, those commits won't show up in your contribution graph.
+After the repository migration, you **must** migrate the email addresses associated with your commits. GitHub uses email addresses in commits to attribute contributions to your profile. If the email addresses aren't verified on your new account, those commits won't show up in your contribution graph.
 
 ### Steps to Complete Email Migration
 
@@ -126,23 +122,16 @@ GitHub uses email addresses in commits to attribute contributions to your profil
    - Go to new account → Settings → Emails
    - Add the same email addresses
    - **Verify them** (check your inbox for verification emails)
-4. **Wait a few minutes** for GitHub to update your contribution graph
+4. **Wait a few minutes** for GitHub to update your contribution graph (Subjective for some repos the contribution did not reflect yet)
 5. **Verify** that your commits appear on your new profile
 
-### ⚠️ Important Notes
+### Important Notes
 
 - Only delete your old account **after** verifying that commits appear on your new profile
 - This process can take a few minutes to a few hours for GitHub to update
 - If you have multiple repositories, you'll need to run this script for each one
 
-## 🔒 Security Best Practices
-
-- **Never commit your GitHub token** to version control
-- **Delete the token** after migration is complete
-- **Use tokens with minimal permissions** (only `repo` scope needed)
-- **Revoke the token** in your old account's settings after use
-
-## 🐛 Troubleshooting
+## Some Troubleshooting Steps
 
 ### "OLD repository does NOT exist or token has no access"
 - Verify the repository name is correct
@@ -164,7 +153,7 @@ GitHub uses email addresses in commits to attribute contributions to your profil
 - Wait a few hours for GitHub to update
 - Check that the email addresses match exactly (case-sensitive)
 
-## 📝 Example Workflow
+## Example Workflow
 
 ```bash
 # 1. Clone the repository
@@ -194,29 +183,21 @@ vim migrate_repo.sh
 # 6. Complete email migration (see instructions above)
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 - Report bugs
 - Suggest improvements
 - Submit pull requests
 
-## 📄 License
+## License
 
 This script is provided as-is for public use. Use at your own risk.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This script migrates repositories and commit history. Always:
 - Test on a non-critical repository first
 - Keep backups of important repositories
 - Verify the migration before deleting your old account
 - Understand that you're responsible for your own data
-
-## 🙏 Acknowledgments
-
-Created to help developers migrate their GitHub profiles while preserving their contribution history.
-
----
-
-**Made with ❤️ and some time invested for the GitHub community**
